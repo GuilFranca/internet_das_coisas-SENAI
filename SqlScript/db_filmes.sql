@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS db_Filmes;
+
+USE db_Filmes;
+
+CREATE TABLE tb_filme(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100),
+    genero VARCHAR(100),
+    ano VARCHAR(100)
+);
