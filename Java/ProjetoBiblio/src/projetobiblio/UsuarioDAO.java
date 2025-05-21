@@ -3,6 +3,9 @@ package projetobiblio;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.List;
+import java.util.ArrayList;
+import java.sql.ResultSet;
 
 public class UsuarioDAO {
     
@@ -33,6 +36,16 @@ public class UsuarioDAO {
         } finally {
             if (pstm != null) pstm.close();
         }
+        
+    }
+    
+    public List<Usuario> listarUsuarios() throws SQLException {
+        
+        String sql = "SELECT * FROM usuarios";
+        
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        List<Usuario> usuarios = new ArrayList<>();
         
     }
     
