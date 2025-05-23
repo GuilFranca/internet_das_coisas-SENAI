@@ -30,11 +30,11 @@ public class FrameBhaskara extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        numA = new javax.swing.JTextField();
+        numB = new javax.swing.JTextField();
+        numC = new javax.swing.JTextField();
+        btnCalcularBhaskara = new javax.swing.JButton();
+        displayResultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,18 +54,17 @@ public class FrameBhaskara extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("A");
 
-        jTextField1.setText("jTextField1");
+        btnCalcularBhaskara.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnCalcularBhaskara.setText("Calcular");
+        btnCalcularBhaskara.setBorder(new javax.swing.border.MatteBorder(null));
+        btnCalcularBhaskara.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularBhaskaraActionPerformed(evt);
+            }
+        });
 
-        jTextField2.setText("jTextField2");
-
-        jTextField3.setText("jTextField3");
-
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("Calcular");
-        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        displayResultado.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        displayResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,19 +80,19 @@ public class FrameBhaskara extends javax.swing.JFrame {
                         .addGap(85, 85, 85)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(numA, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(51, 51, 51)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                            .addComponent(btnCalcularBhaskara, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                            .addComponent(numB, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numC, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(displayResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,18 +107,41 @@ public class FrameBhaskara extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField3))
+                    .addComponent(numA, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(numB)
+                    .addComponent(numC))
                 .addGap(33, 33, 33)
-                .addComponent(jButton1)
+                .addComponent(btnCalcularBhaskara)
                 .addGap(30, 30, 30)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(displayResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCalcularBhaskaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularBhaskaraActionPerformed
+        // TODO add your handling code here:
+//        double numA, numB, numC;
+//        String displayResultado;
+        double numeroA, numeroB, numeroC, delta, reultadoCalculo1, reultadoCalculo2;
+        String reultadoPainel;
+        
+        numeroA = Double.parseDouble(numA.getText());
+        numeroB = Double.parseDouble(numB.getText());
+        numeroC = Double.parseDouble(numC.getText());
+        
+        delta = numeroB * numeroB - 4 * numeroA * numeroC;
+        
+        reultadoCalculo1 = (- numeroB + Math.sqrt(delta)) / 2 * numeroA;
+        
+        reultadoCalculo2 = (- numeroB - Math.sqrt(delta)) / 2 * numeroA;
+        
+        reultadoPainel = "S={" + reultadoCalculo1 + ", " + reultadoCalculo2 + "}";
+        
+        displayResultado.setText(reultadoPainel);
+        
+    }//GEN-LAST:event_btnCalcularBhaskaraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,14 +179,14 @@ public class FrameBhaskara extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnCalcularBhaskara;
+    private javax.swing.JLabel displayResultado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField numA;
+    private javax.swing.JTextField numB;
+    private javax.swing.JTextField numC;
     // End of variables declaration//GEN-END:variables
 }

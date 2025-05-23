@@ -1,21 +1,12 @@
-CREATE DATABASE cadastro;
+CREATE DATABASE IF NOT EXISTS cadastro;
 USE cadastro;
 
-CREATE TABLE usuarios (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    email VARCHAR(100),
-    telefone VARCHAR(20),
-    tipo_usuario VARCHAR(50)
-);
-DROP TABLE usuarios;
-SELECT * FROM usuarios;
+-- DROP DATABASE cadastro;
 
-CREATE TABLE padaria (
+CREATE TABLE usuarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
     email VARCHAR(100),
-    telefone VARCHAR(20)
+    telefone VARCHAR(100),
+    tipo_usuario VARCHAR(100)
 );
--- DROP TABLE padaria;
-SELECT * FROM padaria;
