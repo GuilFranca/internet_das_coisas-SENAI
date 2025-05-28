@@ -142,4 +142,31 @@ public class UsuarioDAO {
         
     }
     
+    public void deletarUsuario(int id) throws SQLException {
+        
+        String sql = "DELET FROM usuarios WHERE id = ?";
+        
+        PreparedStatement stmt = null;
+        
+        try {
+            
+            stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            System.out.println("Usuário deletado com sucesso!");
+            
+        } catch (SQLException e) {
+            System.out.println("ERRO ao deletar usuário: " + e.getMessage());
+        } finally {
+            if (stmt != null) stmt.close();
+        }
+        
+    }
+    
+    public void fecharConexao() throws SQLException {
+        if (connection != null && !connection.isClosed()) {
+            connection.close();
+        }
+    }
+    
 }

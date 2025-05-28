@@ -3,20 +3,39 @@ package projetobiblio;
 import java.util.List;
 import java.sql.SQLException;
 import java.sql.Connection;
+import java.util.Scanner;
 
 public class Biblioteca {
 
     public static void main(String[] args) {
         
+        Scanner scanner = new Scanner(System.in);
+        
         UsuarioDAO usuarioDao = new UsuarioDAO();
         
         Connection connection = null;
+
+        
+        UsuarioDAO dao = new UsuarioDAO();
+        
+        System.out.println("Digite o ID do usuário que deseja deletar: ");
+        int id = scanner.nextInt();
+        
+        try {
+            
+            dao.deletarUsuario(id);
+            
+        } catch (SQLException e) {
+            System.out.println("ERRO ao tentar deletar o usuário: " + e.getMessage());
+        }
+        
+        scanner.close();
         
         try {
        
             connection = new ConnectionFactory().conectaBD();
         
-            UsuarioDAO dao = new UsuarioDAO();
+//            UsuarioDAO dao = new UsuarioDAO();
             
             Usuario usuarioAtualizado = new Usuario();
             usuarioAtualizado.setId(1);
