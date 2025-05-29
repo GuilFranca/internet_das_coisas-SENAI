@@ -144,7 +144,7 @@ public class UsuarioDAO {
     
     public void deletarUsuario(int id) throws SQLException {
         
-        String sql = "DELET FROM usuarios WHERE id = ?";
+        String sql = "DELETE FROM usuarios WHERE id = ?";
         
         PreparedStatement stmt = null;
         
