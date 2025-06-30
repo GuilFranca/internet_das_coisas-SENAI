@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="adc401f1-ab44-453c-ac7e-da12e228daea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/src/main/java/com/java/guilherme/Cadastro_Usuario/CadastroUsuarioApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cadastro-Usuario/src/test/java/com/java/guilherme/Cadastro_Usuario/CadastroUsuarioApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curso.zip" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2zEOSsfNpbzxhsdpOjDsBnkz8mr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Acer/Desktop/SENAI/internet_das_coisas-SENAI/SpringBoot/Curso"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="adc401f1-ab44-453c-ac7e-da12e228daea" name="Changes" comment="" />
+      <created>1751292769118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751292769118</updated>
+    </task>
+    <servers />
+  </component>
+</project>
