@@ -1,4 +1,5 @@
 CREATE DATABASE IF NOT EXISTS cadastro;
+
 USE cadastro;
 
 -- DROP DATABASE cadastro;
@@ -10,3 +11,5 @@ CREATE TABLE usuarios(
     telefone VARCHAR(100),
     tipo_usuario VARCHAR(100)
 );
+
+SELECT * FROM usuarios;
