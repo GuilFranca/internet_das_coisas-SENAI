@@ -1,5 +1,0 @@
-Bhaskara:
-X1 = 3.5
-X2 = -2.5
-7 é ímpar.
-Triângulo Isósceles
